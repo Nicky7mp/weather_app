@@ -1,0 +1,31 @@
+<h1>Current Weather data</h1>
+
+
+<form action="/" method="POST">
+    <h4>Location</h4>
+    <label for="location">City: </label>
+    <input type="text" name="location" required>
+    <br>
+    <label for="location">Country: </label>
+    <input type="text" name="country" required>
+    <br>
+    <input type="submit" value="Send">
+</form>
+
+<div id="displayWeather">
+<h3>{{data.location}}, {{data.country}}</h3>
+
+<p>{{data.description}}</p>
+<p><i class="fas fa-thermometer-half"></i> Temperature: {{data.temp}} K</p>
+<p><i class="fas fa-tint"></i> Humidity: {{data.humidity}}%</p>
+<p><i class="fas fa-wind"></i> Wind: {{data.wind}} mph</p>
+
+</div>
+
+{{!-- <div id="displayWeather">
+    <ul>
+        {{#each data}}
+            <li>{{@key}} : {{this}}</li>
+            {{/each}}
+    </ul>
+</div> --}}
